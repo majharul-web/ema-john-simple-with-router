@@ -7,7 +7,6 @@ const useCart = (products) => {
   useEffect(() => {
     if (products.length) {
       const savedCart = getStoredCart();
-      console.log(savedCart)
       const storeCart = [];
       for (const key in savedCart) {
         const addedProduct = products.find((product) => product.key === key);
