@@ -4,10 +4,11 @@ import Product from "../Product/Product";
 import { addToDb, getStoredCart } from "../../utilities/fakedb";
 import "./Shop.css";
 import { Link } from "react-router-dom";
+import useCart from "../../hooks/useCart";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useCart(products);
   // products to be rendered on the UI
   const [displayProducts, setDisplayProducts] = useState([]);
 
